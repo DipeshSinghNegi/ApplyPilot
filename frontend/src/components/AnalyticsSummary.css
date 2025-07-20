@@ -1,0 +1,26 @@
+.analytics-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.6rem;
+}
+
+.analytics-item {
+  background: #f9f9f9;
+    font-size: 0.7rem;
+
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 0.7rem;
+}
+
+.analytics-item strong {
+  margin-right: 6px;
+}

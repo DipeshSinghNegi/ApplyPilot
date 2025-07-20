@@ -1,0 +1,41 @@
+.job-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.company-name {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.job-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: space-between;
+  font-size: 0.6rem;
+}
+.job-info div {
+  min-width: 200px;
+}
+.job-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+.job-info a:hover {
+  text-decoration: underline;
+}

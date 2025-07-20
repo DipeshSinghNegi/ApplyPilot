@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ApplyPilot</title>
+  <style>
+    body { font-family: sans-serif; width: 320px; padding: 16px; background:#00ffd5 ; }
+    h2 { text-align: center; margin-bottom: 18px;font-size: 1.5rem; }
+    form { display: flex; flex-direction: column; gap: 10px; }
+    label { font-size: 1em; margin-bottom: 2px; }
+   
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212; 
+  color: #ffffff;
+  padding: 16px;
+  width: 350px;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+input[type="tel"] {
+  background-color: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  border-radius: 6px;
+  color: white;
+  padding: 8px;
+}
+
+button {
+  background-color: #10b981; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #059669; 
+}
+
+    
+    
+    button:hover { background: rgb(0, 98, 0); }
+  </style>
+</head>
+<body>
+  
+  <h2>ApplyPilot</h2>
+  <form autocomplete="off" id="userForm" onsubmit="return false;">
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" placeholder="Full Name" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Email" />
+
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" placeholder="Phone" />
+
+    <label for="github">GitHub</label>
+    <input type="text" id="github" placeholder="GitHub URL" />
+
+    <label for="linkedin">LinkedIn</label>
+    <input type="text" id="linkedin" placeholder="LinkedIn URL" />
+
+      <label for="company">Company</label>
+ <input type="text" id="company" placeholder="Company name" />
+
+    <label for="resumeFile">Resume (PDF)</label>
+    <input type="file" id="resumeFile" accept=".pdf" />
+
+    <button type="button" id="saveBtn">Save</button>
+    <button type="button" id="fillFormBtn">Fill Job Form</button>
+    <button id="viewDashboardBtn">View Dashboard</button>
+
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
