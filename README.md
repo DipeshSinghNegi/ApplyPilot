@@ -6,12 +6,44 @@
 
 ## 🧠 Features
 
-- 🔒 Store personal info locally (name, email, phone, GitHub, LinkedIn)
-- 📄 Upload resume once, reuse everywhere
-- ⚡ Autofills job forms ( Lever, Greenhouse, etc.)
-- 📊 Dashboard with application history and analytics
-- 📥 Download application data (PDF/CSV)
-- 🧩 Built with Manifest v3 Chrome Extension + Vanilla JavaScript (little React) + Node.js + MongoDB
+Auto-Fill on Job Portals
+Chrome Extension injects custom JavaScript into job forms (e.g., Lever, Greenhouse) and fills them with stored user data using DOM parsing and contextual matching.
+
+📎 Resume Upload & Secure Storage
+Upload resumes via the extension popup. Files are sent to a Node.js + Express backend and stored securely in the server (or optionally, in cloud storage like AWS/GCS).
+
+🧠 Context-Aware AI Form Logic
+Auto-detects form fields (e.g., "Why do you want this job?") and inserts smart, customizable text using labeled input and textarea detection — a foundation for GPT-powered enhancements.
+
+🛠️ Full Backend API with MongoDB
+Stores user profile, resume links, and application data in a MongoDB database using RESTful API endpoints:
+
+POST /api/profile/save
+
+GET /api/export
+Backend is built with Express and uses Multer for file handling.
+
+🧠 Persistent Local Storage
+Uses Chrome’s storage.local to persist form data inside the browser, minimizing repeat input. This also syncs with backend on save.
+
+📊  Dashboard for Tracking
+A clean  frontend allows users to:
+
+View submitted applications
+See resume status
+Export their data to CSV/PDF
+
+🔄 Export All Data with One Click
+On the dashboard, users can export all job application data to a downloadable file (CSV/PDF) via a backend endpoint.
+
+🧩 Modular Architecture
+Built in three decoupled parts:
+extension/: Chrome autofill assistant
+backend/: Express + MongoDB API
+frontend/: React dashboard
+
+🔒 Secure & Local-first
+Minimal third-party tracking. Resume data and profile details are only stored locally or on your private server, not shared externally.
 
 ---
 
